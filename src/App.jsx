@@ -25,6 +25,25 @@ function App() {
     {
       path: '/about',
       element: <About />
+    },
+    {
+      path: '/cars',
+      // element: <CarLayout />,
+      children: [
+        {
+          index: true,
+          element: <Cars />
+        },
+        {
+          path: ':id',
+          element: <CarDetail />
+        },
+        {
+          path: 'second',
+          element: <SecondCar />
+        }
+      ]
+
     }
   ])
 

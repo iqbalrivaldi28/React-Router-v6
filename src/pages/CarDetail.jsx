@@ -5,12 +5,12 @@ const CarDetail = () => {
 
   const {id} = useParams()
 
-  const {text} = useOutletContext()
+  // const {text} = useOutletContext()
 
   return (
     <>
       <div>CarDetail {id  }</div>
-      <div>{text}</div>
+      {/* <div>{text}</div> */}
     </>
   )
 }
