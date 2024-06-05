@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import About from './pages/About';
 import CarDetail from './pages/CarDetail';
 import SecondCar from './pages/SecondCar';
+import CarLayout from './CarLayout';
 
 function App() {
   return (
@@ -14,13 +15,15 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cars" element={<Cars />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
-        
-        <Route path="/cars/:id" element={<CarDetail />} />
 
-        <Route path='/cars/second' element={<SecondCar />} />
+        <Route path="/cars" element={<CarLayout />}>
+          <Route index element={<Cars />} />
+          <Route path="/cars/:id" element={<CarDetail />} />
+          <Route path="/cars/second" element={<SecondCar />} />
+        </Route>
+
       </Routes>
     </>
   );
