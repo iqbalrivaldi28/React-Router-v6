@@ -10,7 +10,7 @@ const CarLayout = () => {
         <Link to="/cars/3">Car 3</Link>
       </nav>
 
-      <Outlet />
+      <Outlet context={{text: 'share value in route outlet'}}/>
     </>
   );
 };

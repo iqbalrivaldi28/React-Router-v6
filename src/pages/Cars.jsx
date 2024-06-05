@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { useOutletContext } from 'react-router-dom';
 
 const Cars = () => {
-  return (
-    <div>Cars</div>
-  )
-}
+  const { text } = useOutletContext();
 
-export default Cars
+  return (
+    <>
+      <div>Cars</div>
+      <div>{text}</div>
+    </>
+  );
+};
+
+export default Cars;
