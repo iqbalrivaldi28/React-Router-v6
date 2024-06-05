@@ -1,6 +1,6 @@
 import './App.css';
 import Navigation from './components/Navigation';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useRoutes } from 'react-router-dom';
 import Home from './pages/Home';
 import Cars from './pages/Cars';
 import Contact from './pages/Contact';
@@ -12,11 +12,28 @@ import CarsRoute from './CarsRoute';
 import NotFound from './pages/NotFound';
 
 function App() {
+
+  const elementUseRoutes = useRoutes([
+    {
+      path: '/',
+      element: <Home />
+    },
+    {
+      path: '/contact',
+      element: <Contact />
+    },
+    {
+      path: '/about',
+      element: <About />
+    }
+  ])
+
   return (
     <>
       <Navigation />
+      {elementUseRoutes}
 
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
@@ -27,7 +44,7 @@ function App() {
 
       <Routes>
         <Route path='/about' element={<div>Render elemen lain</div>}></Route>
-      </Routes>
+      </Routes> */}
     </>
   );
 }
