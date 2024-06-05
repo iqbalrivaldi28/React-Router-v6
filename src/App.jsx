@@ -8,6 +8,7 @@ import About from './pages/About';
 import CarDetail from './pages/CarDetail';
 import SecondCar from './pages/SecondCar';
 import CarLayout from './CarLayout';
+import CarsRoute from './CarsRoute';
 
 function App() {
   return (
@@ -19,11 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
 
-        <Route path="/cars" element={<CarLayout />}>
-          <Route index element={<Cars />} />
-          <Route path="/cars/:id" element={<CarDetail />} />
-          <Route path="/cars/second" element={<SecondCar />} />
-        </Route>
+        <Route path="/cars/*" element={<CarsRoute />} />
       </Routes>
 
       <Routes>
