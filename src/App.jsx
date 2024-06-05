@@ -9,6 +9,7 @@ import CarDetail from './pages/CarDetail';
 import SecondCar from './pages/SecondCar';
 import CarLayout from './CarLayout';
 import CarsRoute from './CarsRoute';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/about" element={<About />} />
 
         <Route path="/cars/*" element={<CarsRoute />} />
+        <Route path='/*' element={<NotFound />} />
       </Routes>
 
       <Routes>
