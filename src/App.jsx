@@ -13,46 +13,46 @@ import NotFound from './pages/NotFound';
 
 function App() {
 
-  const elementUseRoutes = useRoutes([
-    {
-      path: '/',
-      element: <Home />
-    },
-    {
-      path: '/contact',
-      element: <Contact />
-    },
-    {
-      path: '/about',
-      element: <About />
-    },
-    {
-      path: '/cars',
-      // element: <CarLayout />,
-      children: [
-        {
-          index: true,
-          element: <Cars />
-        },
-        {
-          path: ':id',
-          element: <CarDetail />
-        },
-        {
-          path: 'second',
-          element: <SecondCar />
-        }
-      ]
+  // const elementUseRoutes = useRoutes([
+  //   {
+  //     path: '/',
+  //     element: <Home />
+  //   },
+  //   {
+  //     path: '/contact',
+  //     element: <Contact />
+  //   },
+  //   {
+  //     path: '/about',
+  //     element: <About />
+  //   },
+  //   {
+  //     path: '/cars',
+  //     // element: <CarLayout />,
+  //     children: [
+  //       {
+  //         index: true,
+  //         element: <Cars />
+  //       },
+  //       {
+  //         path: ':id',
+  //         element: <CarDetail />
+  //       },
+  //       {
+  //         path: 'second',
+  //         element: <SecondCar />
+  //       }
+  //     ]
 
-    }
-  ])
+  //   }
+  // ])
 
   return (
     <>
       <Navigation />
-      {elementUseRoutes}
+      {/* {elementUseRoutes} */}
 
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
@@ -63,7 +63,7 @@ function App() {
 
       <Routes>
         <Route path='/about' element={<div>Render elemen lain</div>}></Route>
-      </Routes> */}
+      </Routes>
     </>
   );
 }
