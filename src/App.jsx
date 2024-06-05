@@ -13,6 +13,7 @@ function App() {
   return (
     <>
       <Navigation />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
@@ -23,7 +24,10 @@ function App() {
           <Route path="/cars/:id" element={<CarDetail />} />
           <Route path="/cars/second" element={<SecondCar />} />
         </Route>
+      </Routes>
 
+      <Routes>
+        <Route path='/about' element={<div>Render elemen lain</div>}></Route>
       </Routes>
     </>
   );
