@@ -27,9 +27,12 @@ li a:hover:not(.active) {
   background-color: #111;
 }
 
+/* INi untuk NavLink */
 .active {
   background-color: #04AA6D;
 }
+
+
 .car-layout{
   display: flex;
   margin: 20px;
